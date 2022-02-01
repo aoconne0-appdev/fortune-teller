@@ -3,8 +3,9 @@
 <p>Your lucky numbers for today are:</p>
 
 <ul>
-  <% @zebra.each do |elephant| %>
+  <% @zebra.each do |elephant, n| %>
     <li>
+      <%= n %>:
       <%= elephant %>
     </li>
   <% end %>
