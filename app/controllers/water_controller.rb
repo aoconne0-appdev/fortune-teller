@@ -1,6 +1,6 @@
-class WatersController < ApplicationController
+class WaterController < ApplicationController
   def crab
-    horoscope = "Confirmation of professional success could come your way, Cancer, and you're probably feeling excited and motivated to keep pushing. But you may find that increased responsibilities interfere with your social life. You wonder if friends have forgotten you. They haven't, but it will make you feel better if you squeeze in a few hours for your friends each week.
+    @horoscope = "Confirmation of professional success could come your way, Cancer, and you're probably feeling excited and motivated to keep pushing. But you may find that increased responsibilities interfere with your social life. You wonder if friends have forgotten you. They haven't, but it will make you feel better if you squeeze in a few hours for your friends each week.
     Remember what they say about all work and no play."
 
     @array_of_numbers = Array.new
@@ -11,10 +11,10 @@ class WatersController < ApplicationController
       @array_of_numbers.push(another_number)
     end
     
-    render({ :template => "aqua_views/cancer.html.erb" })
+    render({ :template => "aqua/cancer.html.erb" })
   end
 
-  def scorpion
+  def scorpio
     @horoscope = "All continues to go well professionally, Scorpio. You're feeling physically strong and vigorous. Mentally, however, you might be a bit vague. You may be easily distracted and not as sharp as usual. This isn't a good day to start a new project. Try to concentrate on finishing old tasks and tying up loose ends. You should be ready to go again in a couple of days."
 
     @array_of_numbers = Array.new
@@ -25,7 +25,7 @@ class WatersController < ApplicationController
       @array_of_numbers.push(another_number)
     end
     
-    render({ :template => "aqua_views/scorpio.html.erb" })
+    render({ :template => "aqua/scorpio.html.erb" })
   end
 
   def fish
